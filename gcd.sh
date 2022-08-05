@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#数字のチェック
 expr "$1" + 1 >&/dev/null
 ret1=$?
 
