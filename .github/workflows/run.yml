@@ -4,8 +4,8 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - user: actions/checkout@v2
-      - shell: bash
-      - run: ./gcd_test.sh 
+      - uses: actions/checkout@v2
+       shell: bash
+       run: ./gcd_test.sh 
 
             
