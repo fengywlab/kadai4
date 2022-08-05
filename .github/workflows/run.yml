@@ -4,6 +4,6 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-            ls 
+      - uses: actions/checkout@v2
+      - run: ./gce_test.sh 
             
