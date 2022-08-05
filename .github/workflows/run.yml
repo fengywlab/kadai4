@@ -4,5 +4,6 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd 
+      - run: pwd
+              ls 
             ./dcg_test.sh
