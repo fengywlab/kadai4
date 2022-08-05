@@ -9,7 +9,7 @@ else
 fi
 
 result2=$(./gcd.sh 1 b )
-if [ "$result2" = "Input is not a number" ]; then
+if [ "$result2" = "Ionput is not a number" ]; then
     echo "test2 OK"
 else
     echo "NG:数字のチェック処理は正しくありません。"
