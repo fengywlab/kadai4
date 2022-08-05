@@ -1,6 +1,7 @@
 #!/bin/sh
 
 result1=$(./gcd.sh 2 4)
+echo $result1
 if [ "$result1" = "2" ]; then
     echo "test1 OK"
 else
