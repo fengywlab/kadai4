@@ -1,15 +1,25 @@
 #!/bin/bash
 
+#引数の数のチェック
+if [ $# != 2 ]; then
+    echo 引数エラー: $*
+    exit 1
+fi
+
+arg1=$(echo "$1" | sed 's/^-//')
+arg2=$(echo "$2" | sed 's/^-//')
+
 #数字のチェック
-if [[ "$1" =~ ^[0-9]+$ ]] && [[ "$2" =~ ^[0-9]+$ ]];then
-  while [ 0 -lt "$1" ]
+if [[ "$arg1" =~ ^[0-9]+$ ]] && [[ "$arg2" =~ ^[0-9]+$ ]];then
+  while [ 0 -ne "$arg2" ]
   do
-    t=`expr $2 % $1`
-    set $t $1
+    t=`expr $arg1 % $arg2`
+    arg1=$(echo "$arg2")
+    arg2=$(echo "$t")
   done
-  echo $2
+  echo $arg1
 else
-  echo "Input is not a number"
+  echo "Input is not a natural number"
   exit 1
 fi
 
