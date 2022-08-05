@@ -12,7 +12,7 @@ if [ "$ret1" -ge 2 ] || [ "$ret2" -ge 2 ];then
   exit 1
 fi
 
-while [ 0 -lt $1 ]
+while [ 0 -lt "$1" ]
 do
   t=`expr $2 % $1`
   set $t $1
